@@ -27,30 +27,48 @@ class Game:
         map_layer.zoom = 2
 
         # Generer un joueur
-        self.player = Player()
+        player_position = tmx_data.get_object_by_name("player")
+        self.player = Player(player_position.x, player_position.y)
 
         # Dessiner le groupe de calques
-        self.groupCalque = pyscroll.PyscrollGroup(map_layer=map_layer, default_layer=2)
+        self.groupCalque = pyscroll.PyscrollGroup(map_layer=map_layer, default_layer=3)
         # On rajoute un calque avec le joueur
         self.groupCalque.add(self.player)
 
+    def handle_input(self):
+        pressed = pygame.key.get_pressed()
+
+        if pressed[pygame.K_UP]:
+            self.player.move_up
+        elif pressed[pygame.K_DOWN]:
+            self.player.move_down
+        elif pressed[pygame.K_LEFT]:
+            self.player.move_left
+        elif pressed[pygame.K_RIGHT]:
+            self.player.move_right
 
     def game_lauch(self):
         """
         game launch
         """
 
+        clock = pygame.time.Clock()
+
         loop_reception = 1
 
         # Loop reception
         while loop_reception:  
 
+            self.handle_input()
+            self.groupCalque.update()
+            self.groupCalque.center(self.player.rect.center)
             self.groupCalque.draw(self.screen)
 
             # Screen refresh
             pygame.display.flip()
-            pygame.key.set_repeat(400, 30)
 
             for event in pygame.event.get():
                 if event.type == QUIT:
                     loop_reception = 0
+
+            clock.tick(60)
