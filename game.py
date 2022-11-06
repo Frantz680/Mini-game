@@ -34,6 +34,7 @@ class Game:
         # On rajoute un calque avec le joueur
         self.groupCalque.add(self.player)
 
+
     def game_lauch(self):
         """
         game launch
