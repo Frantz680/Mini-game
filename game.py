@@ -40,12 +40,16 @@ class Game:
 
         if pressed[pygame.K_UP]:
             self.player.position[1] -= self.player.speed
+            self.player.change_animation('up')
         elif pressed[pygame.K_DOWN]:
             self.player.position[1] += self.player.speed
+            self.player.change_animation('down')
         elif pressed[pygame.K_LEFT]:
             self.player.position[0] -= self.player.speed
+            self.player.change_animation('left')
         elif pressed[pygame.K_RIGHT]:
             self.player.position[0] += self.player.speed
+            self.player.change_animation('right')
 
     def game_lauch(self):
         """
@@ -71,4 +75,5 @@ class Game:
                 if event.type == QUIT:
                     loop_reception = 0
 
+            # 60 image par seconde
             clock.tick(60)
