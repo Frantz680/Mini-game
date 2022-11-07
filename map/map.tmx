@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="2">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="16">
  <tileset firstgid="1" source="pictures/winter.tsx"/>
  <layer id="1" name="background-snow" width="50" height="50">
   <data encoding="csv">
@@ -221,5 +221,17 @@
   <object id="1" name="player" x="126.667" y="94">
    <point/>
   </object>
+  <object id="4" name="collision" x="0.666667" y="0.666667" width="798.667" height="15.3333"/>
+  <object id="5" name="collision" x="0" y="62" width="16" height="737"/>
+  <object id="6" name="collision" x="16" y="783" width="785" height="13"/>
+  <object id="7" name="collision" x="785.333" y="16" width="16" height="764"/>
+  <object id="8" x="457.333" y="262.667"/>
+  <object id="9" name="collision" x="1.33333" y="2.66667" width="61.3333" height="60"/>
+  <object id="10" name="collision" x="16.6667" y="64" width="46" height="160.667"/>
+  <object id="11" name="collision" x="62.6667" y="176" width="50" height="48"/>
+  <object id="12" name="collision" x="144.667" y="176" width="206.667" height="46.6667"/>
+  <object id="13" name="collision" x="240" y="224" width="288" height="272"/>
+  <object id="14" name="collision" x="480" y="495.333" width="47.3333" height="193.333"/>
+  <object id="15" name="collision" x="527.333" y="640.667" width="258" height="46.6667"/>
  </objectgroup>
 </map>
