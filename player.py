@@ -11,20 +11,21 @@ class Player(pygame.sprite.Sprite):
         self.position = [x, y]
         self.speed = 2
 
-    def move_right(self): 
-        self.position[0] += self.speed
+    # Fonctionne pas
+    # def move_right(self): 
+    #     self.position[0] += self.speed
 
-    def move_left(self): 
-        self.position[0] -= self.speed
+    # def move_left(self): 
+    #     self.position[0] -= self.speed
 
-    def move_up(self): 
-        self.position[1] -= self.speed
+    # def move_up(self): 
+    #     self.position[1] -= self.speed
 
-    def move_down(self): 
-        self.position[1] += self.speed
+    # def move_down(self): 
+    #     self.position[1] += self.speed
 
     def update(self):
-        self.rect.topleft= self.position
+        self.rect.topleft = self.position
 
     def get_image(self, x, y):
         image = pygame.Surface([32,32])
