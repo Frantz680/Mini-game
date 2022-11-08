@@ -38,7 +38,7 @@ class Game:
                 self.walls.append(pygame.Rect(object.x, object.y, object.width, object.height))
 
         # Dessiner le groupe de calques
-        self.groupCalque = pyscroll.PyscrollGroup(map_layer=map_layer, default_layer=3)
+        self.groupCalque = pyscroll.PyscrollGroup(map_layer=map_layer, default_layer=4)
         # On rajoute un calque avec le joueur
         self.groupCalque.add(self.player)
 
