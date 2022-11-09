@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="54">
  <tileset firstgid="1" source="pictures/winter.tsx"/>
- <tileset firstgid="721" source="../house.tsx"/>
+ <tileset firstgid="721" source="house.tsx"/>
  <layer id="1" name="background-snow" width="50" height="50">
   <data encoding="csv">
 522,523,524,525,522,523,524,525,522,523,524,525,522,523,524,525,522,523,524,525,522,523,524,525,522,523,524,525,522,523,524,525,522,523,524,525,522,523,524,525,522,523,524,525,522,523,524,525,522,523,
